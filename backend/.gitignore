@@ -1,0 +1,93 @@
+# -------------------------
+# Node.js + React (Vite) App
+# -------------------------
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+vite-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+build/
+server/dist/
+server/build/
+
+# Local environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache and temp
+.cache/
+.vite/
+vite-cache/
+tmp/
+temp/
+*.tsbuildinfo
+
+# Testing
+coverage/
+*.lcov
+
+# Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Optional lock files (uncomment if you prefer ignoring them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Logs from PM2 or other process managers
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime data
+pids/
+*.pid
+*.seed
+lib-cov/
+coverage/
+.nyc_output/
+
+# Build artifacts
+*.tgz
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional: ignore uploads or large local data
+uploads/
+data/
+files/
+storage/
+
+# Storybook (if used)
+storybook-static/
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
