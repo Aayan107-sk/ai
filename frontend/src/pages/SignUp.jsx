@@ -12,7 +12,7 @@ const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [name,setname]=useState("")
   const [email,setEmail]=useState("")
-  const [password,setPassword]=useState("")
+  const [password,setPassword]=useState("")     
   const [loding,setLoding]=useState(false)
 
 
