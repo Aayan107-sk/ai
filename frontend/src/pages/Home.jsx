@@ -48,6 +48,8 @@ const Home = () => {
   }
 
   const speak = (text) => {
+    console.log(text);
+    
     const utterance = new SpeechSynthesisUtterance(text);
     console.log(utterance);
     
@@ -141,7 +143,7 @@ const Home = () => {
     }
 
     recognition.onerror=(e)=>{
-      console.warn("recgnition Error:",e.error);
+      // console.warn("recgnition Error:",e.error);
       isRecognizingRef.current=false;
       setListening(false);
       if(e.error !== "aborted" && !isSpeakingRef.current){

@@ -1,7 +1,7 @@
 "use client";
 import { useContext, useState } from "react";
 import { motion } from "framer-motion";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { FaEye, FaEyeSlash, FaRobot } from "react-icons/fa";
 import { userDataContext } from "../context/UserContext.jsx";
@@ -12,11 +12,13 @@ const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [name,setname]=useState("")
   const [email,setEmail]=useState("")
-  const [password,setPassword]=useState("")     
+  const [password,setPassword]=useState("")
   const [loding,setLoding]=useState(false)
 
 
   const {serverURL,userData,setUserData}=useContext(userDataContext)
+
+  const navigate=useNavigate()
 
   const [err,setErr]=useState("")
   const handleSignUp=async (e)=>{

@@ -1,7 +1,7 @@
 "use client";
 import { useContext, useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { FaEye, FaEyeSlash, FaRobot } from "react-icons/fa";
 import { userDataContext } from "../context/UserContext.jsx";
@@ -15,6 +15,7 @@ const SignIn = () => {
   const [loding,setLoding]=useState(false)
 
   const {serverURL,userData,setUserData}=useContext(userDataContext)
+  const navigate=useNavigate()
 
   const [err,setErr]=useState("")
   const handleSignIn = async (e)=>{
@@ -29,13 +30,18 @@ const SignIn = () => {
       setLoding(false)
       navigate("/")
             
-    } catch (error) {
-      console.log(error);
-      setUserData(null)
-      setLoding(false)
-      setErr(error.response.data.message)
+    }catch (error) {
+  console.log(error);
 
-    }
+  const message =
+    error?.response?.data?.message || 
+    error?.message || 
+    "Something went wrong";
+
+  setErr(message);
+  setUserData(null);
+  setLoding(false);
+}
 
   }
 

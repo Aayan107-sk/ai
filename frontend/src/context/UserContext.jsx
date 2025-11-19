@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from 'react'
 
 export const userDataContext=createContext()
 function UserContext({children}){
-  const serverURL="https://aii-dchy.onrender.com"
+  const serverURL="http://localhost:5000"
   const [userData,setUserData]=useState(null)
   const [frontendImage,setFrontendImage]= useState(null)
   const [backendImage,setBackendImage]= useState(null)
